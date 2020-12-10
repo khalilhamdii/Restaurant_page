@@ -1,4 +1,7 @@
+import NavFooter from "./assets/js/navAndFooter";
 import Home from "./assets/js/home";
+import Service from "./assets/js/service";
+import Visit from "./assets/js/visit-us";
 import "./assets/bootstrap/css/bootstrap.min.css";
 const importAll = (r) => {
   return r.keys().map(r);
@@ -16,43 +19,47 @@ const bodyBg = () => {
 
 const contentChilds = () => {
   const content = document.getElementById("content");
+  const nav = document.createElement("div");
   const header = document.createElement("div");
-  header.setAttribute("id", "header");
   const tabs = document.createElement("div");
+  const footer = document.createElement("div");
+  nav.setAttribute("id", "nav");
+  header.setAttribute("id", "header");
   tabs.setAttribute("id", "tab");
+  footer.setAttribute("id", "footer");
+  content.appendChild(nav);
   content.appendChild(header);
   content.appendChild(tabs);
+  content.appendChild(footer);
 };
 
-const restHeader = () => {
-  const header = document.getElementById("header");
-  const element = document.createElement("h1");
-  element.classList.add(
-    "text-center",
-    "text-white",
-    "d-none",
-    "d-lg-block",
-    "site-heading"
-  );
-  const span1 = document.createElement("span");
-  const span2 = document.createElement("span");
-  span1.innerText = "Restaurant & tea Room";
-  span2.innerText = "RAYHANA";
-  span1.classList.add(
-    "text-primary",
-    "site-heading-upper",
-    "mb-3",
-    "font-weight-bold"
-  );
-  span2.classList.add("site-heading-lower");
-  element.appendChild(span1);
-  element.appendChild(span2);
-  header.appendChild(element);
-};
+const renderTabs = (() => {
+  const homeTab = () => {
+    Home.renderHome(images[1]);
+  };
+
+  const serviceTab = () => {
+    Service.renderService(images[2], images[3], images[4]);
+  };
+
+  const visitTab = () => {
+    Visit.renderVisit();
+  };
+  return { homeTab, serviceTab, visitTab };
+})();
 
 document.addEventListener("DOMContentLoaded", () => {
   bodyBg();
   contentChilds();
-  restHeader();
+  NavFooter.renderNav();
+  NavFooter.renderHeader();
+  NavFooter.renderFooter();
   Home.renderHome(images[1]);
+  const homeItem = document.getElementById("home");
+  const serviceItem = document.getElementById("service");
+  const visitItem = document.getElementById("visit-us");
+
+  homeItem.addEventListener("click", renderTabs.homeTab);
+  serviceItem.addEventListener("click", renderTabs.serviceTab);
+  visitItem.addEventListener("click", renderTabs.visitTab);
 });
