@@ -30,8 +30,8 @@ const NavFooter = (() => {
     content.innerHTML = `
     <nav class="navbar navbar-dark navbar-expand-lg sticky-top py-lg-4" id="mainNav"
     style="background: rgba(230,167,86,0.95);">
-    <div class="container"><a class="navbar-brand text-monospace text-capitalize d-lg-none text-expanded"
-        data-bs-hover-animate="pulse" href="#"
+    <div class="container"><a id="logo" class="navbar-brand text-monospace text-capitalize d-lg-none text-expanded"
+        data-bs-hover-animate="pulse"
         style="color: rgb(255,255,255);font-size: 25px;font-family: Raleway, sans-serif;border-style: none;border-right-style: none;border-bottom-style: none;">Rayhana</a><button
         data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" data-bs-hover-animate="pulse"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"

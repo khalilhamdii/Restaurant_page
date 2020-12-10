@@ -3900,6 +3900,7 @@ input[type="submit"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 .nav-link:focus,
 .nav-link:hover {
@@ -3932,6 +3933,11 @@ input[type="submit"].btn-block {
 }
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+.nav-item.active {
   color: #495057;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
@@ -3997,6 +4003,7 @@ input[type="submit"].btn-block {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+  cursor: pointer;
 }
 .navbar-brand:focus,
 .navbar-brand:hover {
