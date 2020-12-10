@@ -13,6 +13,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Restaurant Page",
+      template: "./src/index.html",
+      filename: "./index.html",
     }),
   ],
   output: {
