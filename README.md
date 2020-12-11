@@ -4,7 +4,7 @@
 
 ## Description
 
-> In this project, I have created a web page of a local restaurant from where I live. I have built it using javascript & Webpack. This web page contains three tabs :
+In this project, I have created a web page of a local restaurant from where I live. I have built it using javascript & Webpack. This web page contains three tabs :
 
 - A home page.
 - A service page.
@@ -22,7 +22,7 @@
 
 ## Live Demo
 
-[Live demo](https://rawcdn.githack.com/khalilhamdii/Restaurant_page/cdbaf37e24700bcd6eb9b53ea84d3df7fa15aa51/dist/index.html)
+[Live demo](https://khalilhamdii.github.io/Restaurant_page/)
 
 ## Screenshot
 
