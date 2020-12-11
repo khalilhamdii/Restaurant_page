@@ -1,11 +1,11 @@
 const Restaurant = (() => {
   const activeNav = (tabNbr) => {
-    const navItems = document.querySelectorAll(".nav-item");
-    navItems.forEach((item) => item.classList.remove("active"));
-    navItems[tabNbr].classList.add("active");
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach((item) => item.classList.remove('active'));
+    navItems[tabNbr].classList.add('active');
   };
   const renderHome = (img) => {
-    const content = document.getElementById("tab");
+    const content = document.getElementById('tab');
     content.innerHTML = `
     <section class="page-section clearfix">
     <div class="container">
@@ -26,7 +26,7 @@ const Restaurant = (() => {
   };
 
   const renderService = (img1, img2, img3) => {
-    const content = document.getElementById("tab");
+    const content = document.getElementById('tab');
     content.innerHTML = `
     <section class="page-section">
     <div class="container">
@@ -72,7 +72,7 @@ const Restaurant = (() => {
   };
 
   const renderVisit = () => {
-    const content = document.getElementById("tab");
+    const content = document.getElementById('tab');
     content.innerHTML = `
     <section class="page-section cta" style="background: transparent;">
     <div class="container">
